@@ -12,6 +12,8 @@ class Travel extends Model
 {
     use HasFactory, Sluggable;
 
+    protected $table = 'travels';
+    
     protected $fillable = [
         'is_public',
         'slug',
