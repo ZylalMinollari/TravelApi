@@ -24,7 +24,10 @@ class TravelRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'is_pubic' => 'boolean',
+            'name' => ['required', 'unique:travels'],
+            'description' => ['required'],
+            'number_of_days' => ['required','integer'], 
         ];
     }
 }
